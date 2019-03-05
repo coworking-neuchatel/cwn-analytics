@@ -3,12 +3,31 @@
 Plugin Name: Coworking Neuchatel Analytics
 Plugin URI: https://coworking-neuchatel.ch
 Description: This plugin adds functionality to the Coworking Neuchatel website.
-Version: 0.0.2
+Version: 0.0.3
 Author: Manuel Schmalstieg
 Author URI: https://ms-studio.net
 */
 
 
+
+
+// Scripts qui doivent figurer dans le "head" de la page.
+
+function cowork_analytics_head() {
+    
+    // Tag pour Mailchimp
+    // Mailchimp Connected site, for Google Remarketing
+    
+     ?>
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/95099d311a4216d7986939c9a/6a4a578a90580ad6048857666.js");</script>
+    <?php 
+    
+}
+add_action( 'wp_head', 'cowork_analytics_head' );
+
+
+
+// Scripts placés dans le Footer de la page.
 
 function cowork_analytics_footer(){
 
@@ -49,13 +68,10 @@ s.parentNode.insertBefore(b, s);})();
 /></noscript>
 <?php 
 
-// Tag pour Mailchimp
-// Mailchimp Connected site, for Google Remarketing
-
- ?>
-<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/95099d311a4216d7986939c9a/6a4a578a90580ad6048857666.js");</script>
-<?php 
 
 } 
 
-add_action('wp_footer', 'cowork_analytics_footer'); ?>
+add_action('wp_footer', 'cowork_analytics_footer'); 
+
+
+
