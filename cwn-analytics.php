@@ -8,7 +8,11 @@ Author: Manuel Schmalstieg
 Author URI: https://ms-studio.net
 */
 
-
+/*
+Note concernant Google Analytics:
+Actuellement ce code est ajouté via l’extension “Google Analytics Dashboard pour WP (GADWP)”.
+https://coworking-neuchatel.ch/wp-admin/admin.php?page=gadwp_settings
+*/
 
 
 // Scripts qui doivent figurer dans le "head" de la page.
